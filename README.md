@@ -1,2 +1,2 @@
-# text-editor
-A simple text editor.
+# markdown-editor
+A simple markdown editor.
