@@ -12,6 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
     - name: Install CMake and PKG-Config
       run: sudo apt-get install cmake pkg-config
     - name: Install OpenGL and Dependencies
