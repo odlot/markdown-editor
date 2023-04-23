@@ -6,6 +6,7 @@
 #include "editor/editor.hpp"
 
 #include <memory>
+#include <stdlib.h>
 
 int main(int argc, char** argv) {
     if (!glfwInit()) {
