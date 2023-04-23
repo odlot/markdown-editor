@@ -1,0 +1,23 @@
+name: Ubuntu CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install CMake and PKG-Config
+      run: sudo apt-get install cmake pkg-config
+    - name: Install OpenGL and Dependencies
+      run: |
+        sudo apt-get install mesa-utils libglu1-mesa-dev freeglut3-dev mesa-common-dev \
+                              libglew-dev libglfw3-dev libglm-dev \
+                              libao-dev libmpg123-dev
+    - name: Build Application
+      run: cmake ..
