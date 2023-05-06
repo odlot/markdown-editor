@@ -46,6 +46,9 @@ int main(int argc, char** argv) {
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;         // Enable Docking
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;       // Enable Multi-Viewport / Platform Windows
 
+    // Set custom font
+    io.Fonts->AddFontFromFileTTF("misc/fonts/NotoSans/NotoSans-Regular.ttf", 16.0F);
+
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
     ImGuiStyle& style = ImGui::GetStyle();
